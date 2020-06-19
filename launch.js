@@ -3,9 +3,9 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 
 (async function example() {
   if (process.platform === 'win32') {
-    process.env['PATH'] = process.env.PATH + ";" + path.resolve('./node_modules','.bin');
+    process.env['PATH'] = process.env.PATH + ";" + path.resolve('node_modules','chromedriver','lib','chromedriver');
   } else {
-    process.env['PATH'] = process.env.PATH + ":" + path.resolve('./node_modules','.bin');
+    process.env['PATH'] = process.env.PATH + ":" + path.resolve('node_modules','.bin');
   }
   let driver = await new Builder().forBrowser('chrome').build();
   try {
